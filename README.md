@@ -1,4 +1,4 @@
-##mongoDB - Docker Container:
+# mongoDB - Docker Container:
 
 #### To start server:
 ```
@@ -7,12 +7,12 @@ $ docker-compose up -d
 $ docker exec -it mongodbcontainer_mongo_1 bash
 ```
 
-####or just:
+#### Or just:
 ```
 docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:4.0.4
 ```
 
-###Basic mongoDB commands:
+### Basic mongoDB commands:
 ```
 $ db.version()
 $ show dbs
