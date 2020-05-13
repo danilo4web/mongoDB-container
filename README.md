@@ -1,4 +1,4 @@
-# mongoDB - Docker Container:
+# MongoDB - Docker Container:
 
 #### To start server:
 ```
@@ -44,9 +44,17 @@ $ composer require mongodb/mongodb
 ```
 <?php
 
-$client = new MongoDB\Client(
-    'mongodb+srv://<username>:<password>@<cluster-address>/test?retryWrites=true&w=majority'
+$manager = new \MongoDB\Driver\Manager(
+    'mongodb://mongo:27017'
 );
+```
 
-$db = $client->test;
+### Search Example
+```
+<?php
+
+$filter = ['name' => 'Danilo'];
+$options = [];
+$query = new \MongoDB\Driver\Query($filter, $options);
+$response = $manager->executeQuery('db.user', $query);
 ```
