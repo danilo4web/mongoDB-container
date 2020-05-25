@@ -12,6 +12,11 @@ $ docker exec -it mongodbcontainer_mongo_1 bash
 docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:4.0.4
 ```
 
+#### Mongo terminal:
+```
+$ mongo
+```
+
 ### Basic mongoDB commands:
 ```
 $ db.version()
